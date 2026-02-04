@@ -1,0 +1,16 @@
+name: mnist-classification
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.14
+  - numpy
+  - matplotlib
+  - scikit-learn
+  - tqdm
+  - jupyterlab
+  - ruff
+  - mypy
+  - pyright
+  - pytest
+  - black
+  - pip

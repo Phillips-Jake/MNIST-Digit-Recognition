@@ -1,0 +1,43 @@
+"""Classical (NumPy-first) model and feature implementations for this MNIST project."""
+
+from src.models.classical import (
+    augment_feature_vector,
+    center_data,
+    closed_form,
+    compute_cost_function,
+    compute_probabilities,
+    compute_test_error,
+    compute_test_error_linear,
+    compute_test_error_mod3,
+    cubic_features,
+    get_classification,
+    polynomial_kernel,
+    principal_components,
+    project_onto_PC,
+    rbf_kernel,
+    reconstruct_PC,
+    run_gradient_descent_iteration,
+    softmax_regression,
+    update_y,
+)
+
+__all__ = [
+    "augment_feature_vector",
+    "center_data",
+    "closed_form",
+    "compute_cost_function",
+    "compute_probabilities",
+    "compute_test_error",
+    "compute_test_error_linear",
+    "compute_test_error_mod3",
+    "cubic_features",
+    "get_classification",
+    "polynomial_kernel",
+    "principal_components",
+    "project_onto_PC",
+    "rbf_kernel",
+    "reconstruct_PC",
+    "run_gradient_descent_iteration",
+    "softmax_regression",
+    "update_y",
+]

@@ -1,0 +1,53 @@
+[tool.black]
+line-length = 120
+target-version = ['py314']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+)/
+'''
+
+[tool.ruff]
+line-length = 120
+target-version = "py314"
+extend-include = ["*.ipynb"]
+exclude = [
+  ".git",
+  "__pycache__",
+  ".venv",
+]
+
+[tool.ruff.lint]
+select = [
+  "E",  # pycodestyle errors
+  "F",  # pyflakes errors
+  "B",  # bugbear
+  "C",  # complexity
+  "Q",  # flake8-quotes
+  "T",  # flake8-builtins and related
+  "D"   # docstring checks
+]
+ignore = ["E203", "T201"] # whitespace before ':' conflicts with Black
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.lint.per-file-ignores]
+"*.ipynb" = ["T201"]  # allow print statements in notebooks
+
+[tool.mypy]
+python_version = "3.14"
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_unused_configs = true
+disallow_incomplete_defs = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+show_error_codes = true
+ignore_missing_imports = false
+
+[[tool.mypy.overrides]]
+module = "sklearn.*"
+ignore_missing_imports = true
